@@ -1,0 +1,21 @@
+% Basic packages
+\RequirePackage[style=german]{csquotes}
+\RequirePackage[citestyle=ieee,bibstyle=ieee,backend=biber]{biblatex}
+\RequirePackage[ngerman]{babel}
+\RequirePackage{fontawesome}
+\RequirePackage{enumitem}
+
+% Fancy colored links
+\RequirePackage{color}
+\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39} % based on latexcolor.com
+
+\RequirePackage[final]{hyperref}
+\hypersetup{
+    colorlinks = true,
+    urlcolor = {coolblack},
+    citecolor = {black}
+}
+
+% Custom link commands
+\newcommand{\infoLink}[2]{\faInfoCircle\,~\href{#1}{#2}}
+\newcommand{\toolLink}[2]{\faWrench\,~\href{#1}{#2}}
