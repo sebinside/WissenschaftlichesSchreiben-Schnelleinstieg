@@ -204,7 +204,12 @@ Nach der Fertigstellung einer wissenschaftlichen Ausarbeitung wird diese üblich
 \label{sec:Praesentieren:Vortragen}
 
 Auf Vorträge treffen die gleichen Regeln und Tipps wie auch für Ausarbeitungen zu: Das \emph{Prinzip der Pyramide} beachten, an Vorgaben zu Vorlagen, Inhalt und Umfang halten, nüchtern und präzise präsentieren, Quellen sauber zitieren und kenntlich machen. 
-Darüber hinaus gelten auch die wohlbekannten Regeln eines guten Vortrags: Lesbare, nicht überladene Folien erstellen, Inhalte und insbesondere Grafiken erklären, frei und flüssig präsentieren, Backup-Folien für Rückfragen bereithalten.
+Darüber hinaus gelten auch die wohlbekannten Regeln eines guten Vortrags: Lesbare, nicht überladene Folien erstellen, Inhalte und insbesondere Grafiken erklären, frei und flüssig präsentieren, Backup-Folien für Rückfragen bereithalten. Hierzu:
+
+\smallskip
+\begin{itemize}[label={\symbolInfo}]
+    \item \href{https://sdqweb.ipd.kit.edu/wiki/Vortragshinweise}{SDQ-Wiki --- Vortragshinweise}
+\end{itemize}
 
 \subsection{\LaTeX\ vs. Microsoft PowerPoint}
 \label{sec:Praesentieren:PowerPoint}
@@ -212,26 +217,53 @@ Darüber hinaus gelten auch die wohlbekannten Regeln eines guten Vortrags: Lesba
 Studierenden ist es üblicherweise freigestellt, ob die Vortragsfolien mit \toolLink{https://ctan.org/pkg/beamer}{\LaTeX\ beamer} oder einem Präsentations-Tool wie PowerPoint erstellt werden. 
 Obwohl die Entscheidung für \LaTeX\ naheliegend scheint, hat diese auch Nachteile. 
 Die Erfahrung zeigt, dass mit \LaTeX\ erstellte Präsentationen von Studierenden nicht selten eine schlechtere Qualität u.a. bezüglich des Layouts aufweisen. 
-Im Gegensatz zu Dokumenten sind hier die technischen Hürden größer und gute Folien mit mehr Aufwand verbunden.
+Im Gegensatz zu Dokumenten sind hier die technischen Hürden größer und gute Folien mit mehr Aufwand verbunden, weswegen die Entscheidung gut abgewägt werden sollte.
 
 
 \section{Verwalten}
 \label{sec:Verwalten}
 
-Wiss A von wenigen Monat zu vielen Jahren
+Wissenschaftliche Ausarbeitungen können sich über einen Zeitraum von wenigen Monaten (z.B. Seminararbeiten) bis hin zu vielen Jahren (z.B. Dissertationen) erstrecken. 
+Aus diesem Grund ist die saubere Verwaltung von Dokumenten und Literatur unumgänglich.
 
 \subsection{Literaturverwaltung}
+\label{sec:Verwalten:Literatur}
 
-Zotero
-Funktionalität
+Im Rahmen wissenschaftlichen Arbeit findet und ließt man eine Vielzahl anderer Veröffentlichungen. 
+Um hier den Überblick zu behalten, eignen sich Werkzeuge für die Literaturverwaltung wie das kostenlose \toolLink{https://www.zotero.org/}{Zotero}. 
+Zu den hilfreichen Funktionen solcher Werkzeuge zählen:
+
+\smallskip
+\begin{itemize}
+    \item Verwalten und Organisieren von gefundener Literatur mittels Ordnern, Sammlungen, Tags und Notizen
+    \item Automatisches Abrufen von Metadaten wie Titel, Autor oder Publisher aus Online-Datenbanken
+    \item Einfaches Teilen der eigenen Bibliothek mit anderen Forschern oder Studierenden
+    \item Einfaches Hinzufügen neuer Literatur mittels Browser-Erweiterung
+    \item Import und Export von \bibtex-Dateien
+\end{itemize}
 
 \subsection{Versionsverwaltung}
+\label{sec:Verwalten:Version}
 
-SVN, git
+Aktiv bearbeitete Dokumente wie Seminararbeiten und insbesondere Abschlussarbeiten sollten regelmäßig, im Idealfall täglich, gesichert werden. 
+Hierfür bietet sich die Versionsverwaltung mittels \emph{SVN} oder \emph{git} an. 
+Durch das regelmäßige Hochladen auf einen externen Server, wie z.B. \toolLink{https://git.scc.kit.edu/}{SCC GitLab} (kostenlos für KIT-Studierende), wird das Risiko des Datenverlusts minimiert. 
 
-\section{Weitere Tipps und Tools}
+Zudem ermöglicht \emph{git} das Laden früherer Versionen (sog. \emph{Commits}), was insbesondere bei technischen Problemen sehr hilfreich sein kann. 
+Da \LaTeX\- wie auch \bibtex\-Dateien textbasiert sind, lassen sich Änderungen einfach nachvollziehen und bei Bedarf rückgängig machen. 
+\emph{Hinweis}: Datenverlust ohne ausreichende Sicherungen ist explizit \emph{keine} Entschuldigung, z.B. für Fristverlängerungen. 
+Kein Backup, kein Mitleid. 
+Erst recht als Informatiker.
 
-Sprach-Tools nutzen, z.B. Linguee und DeepL
-PDF in Word öffnen um Grammatik zu prüfen
-LatexMK
-stack exchange latex
+\section{Weitere Tipps und Werkzeuge}
+\label{sec:Tipps}
+
+Um dieses Dokument kurz zu halten, konnten eine Vielzahl weiterer nützlicher Tipps und Werkzeuge nicht mit aufgenommen werden. An dieser Stelle sei erneut auf das umfangreiche \infoLink{https://sdqweb.ipd.kit.edu/wiki/Wissenschaftliches_Schreiben}{SDQ-Wiki} verwiesen. Ebenfalls hilfreich:
+
+\smallskip
+\begin{itemize}[label={\faLightbulbO}]
+    \item Es gibt viele kostenlose aber mächtige Übersetzter-Tools wie \toolLink{https://www.deepl.com/translator}{DeepL} und \toolLink{https://www.linguee.de/}{Linguee}
+    \item Microsoft Word kann zur Sprach- und Grammatik-Prüfung eingesetzt werden. Mit \LaTeX\ generierte PDF-Dateien lassen sich hierzu direkt in Word öffnen
+    \item Bei Änderungen in Referenzen oder der Bibliographie müssen zunächst \fileType{tex}-Dateien übersetzt, dann \bibtex\ bzw. \emph{biber} ausgeführt und dann nochmals übersetzt werden. Diesen Vorgang automatisiert \toolLink{https://ctan.org/pkg/latexmk}{latexmk}
+    \item Die allermeisten Fragen zu \LaTeX wurden schon mal gestellt und z.B. auf dem \infoLink{https://tex.stackexchange.com/}{\TeX\ StackExchange} beantwortet
+\end{itemize}
