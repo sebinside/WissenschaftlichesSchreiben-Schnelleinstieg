@@ -83,7 +83,7 @@ Das Erscheinungsbild der Markierungen ist meist vorgegeben, das \emph{IEEE} empf
 Hierzu:
 
 \smallskip
-\begin{itemize}[label={\faInfoCircle}]
+\begin{itemize}[label={\symbolInfo}]
     \item \href{https://sdqweb.ipd.kit.edu/wiki/Zitieren}{SDQ-Wiki --- Zitieren}
 \end{itemize}
 
@@ -91,48 +91,134 @@ Hierzu:
 \section{Schreiben}
 \label{sec:Schreiben}
 
+Für die Erstellung wissenschaftlicher Dokumente aller Art hat sich das Textsatzsystem \TeX\ durchgesetzt. 
+Die Erweiterung \LaTeX\ ermöglicht es Autoren, sich auf den Inhalt ihrer Dokumente zu konzentrieren und weniger Fokus auf die Formatierung dieser legen zu müssen.
+
 \subsection{Die Sprache \LaTeX}
+\label{sec:Schreiben:Sprache}
 
-Kein WYSIWYG
+\LaTeX\ ist eine textbasierte Auszeichnungssprache (engl. \emph{Markup Language}) und folgt \emph{nicht} dem \emph{WYSIWYG}-Prinzip (\emph{\textbf{W}hat \textbf{Y}ou \textbf{S}ee \textbf{I}s \textbf{W}hat \textbf{Y}ou \textbf{G}et}) wie etwa Microsoft Word. 
+Dokumente werden mit Hilfe von Befehlen für Text-Formatierung, Überschriften, Tabellen, Listen, Zitaten, etc., erstellt und anschließend von der zugrundeliegenden \TeX-Engine übersetzt, üblicherweise in PDF-Dateien.
+Hierzu: 
 
-https://sdqweb.ipd.kit.edu/wiki/LaTeX
+\smallskip
+\begin{itemize}[label={\symbolInfo}]
+    \item \href{https://sdqweb.ipd.kit.edu/wiki/LaTeX}{SDQ-Wiki --- LaTeX}
+    \item \href{https://learnxinyminutes.com/docs/de-de/latex-de/}{Lerne X in Y Minuten: LaTeX}
+\end{itemize}
 
 \subsection{Installation}
-Installation
-TexLive
-Dateien und Strukturen
+\label{sec:Schreiben:Installation}
+
+Um lokal \LaTeX-Dokumente erzeugen zu können, nutzt man eine Distribution wie \toolLink{http://www.tug.org/texlive/}{TeX Live}. 
+Diese bringen alle notwendigen Werkzeuge und eine Vielzahl an Paketen mit, die bei Bedarf eingebunden werden können um die Basisfunktionalität z.B. um angepasste Tabellen, speziell formatierte Listen oder mathematische Symbole zu erweitern.
+
+Zu den wichtigsten Dateitypen zählen: \fileType{tex} (\TeX-Dokumente), \fileType{bib} (Bibliographie), \fileType{cls} (Dokumentvorlagen) und \fileType{sty} (Stilvorlagen).
+Beim Generieren von PDF-Dateien fallen zudem temporäre Dateien an; diese können meistens ignoriert werden.
+Für einen besseren Überblick empfiehlt es sich, Inhalte in mehrere \fileType{tex}-Dateien aufzuteilen und diese mit Hilfe des \emph{Input}-Befehls einzubinden.
 
 \subsection{Werkzeuge}
+\label{sec:Schreiben:Werkzeuge}
 
-VS-Code mit Tex Workshop
-Overleaf
-LatexMK
-stack exchange latex
+Um effizient \LaTeX-Dokumente schreiben zu können, wurden in den letzten Jahrzehnten eine Vielzahl von Editoren entwickelt. Viele davon sind, im Vergleich mit aktuellen IDEs, leider ziemlich in die Jahre gekommen. Daher empfehle ich:
 
+\smallskip
+\begin{itemize}[label={\symbolTool}]
+    \item \href{https://code.visualstudio.com/}{Visual Studio Code}, eine Open-Source IDE, mit der \href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{LaTeX-Workshop}-Erweiterung für lokales Arbeiten
+    \item \href{http://overleaf.com/}{Overleaf}, ein Online-Editor im Browser für kollaboratives Arbeiten (für KIT-Studierende ist Premium-Funktionalität kostenlos, keine Installation notwendig)
+\end{itemize}
+\smallskip
 
+\subsection{\bibtex\ vs. Bib\LaTeX}
+\label{sec:Schreiben:Bibtex}
 
-\subsection{Bibtex vs. Biblatex}
-
-Biber
+\bibtex\ übernimmt die Verwaltung und Generierung des Literaturverzeichnisses, indem Referenzen im Text (z.B. mittels des \emph{Cite}-Befehls) mit verlinkten \fileType{bib}-Dateien abgeglichen werden. 
+Bib\LaTeX\ erweitert diese Funktionalität unter anderem um Unicode-Support und verbesserte Anpassungsmöglichkeiten und bringt hierfür ein eigenes Backend namens \emph{biber} mit sich. 
+In Distribution wie \toolLink{http://www.tug.org/texlive/}{TeX Live} sind beide enthalten. 
+Wenn möglich, sollte Bib\LaTeX\ auf Grund der moderneren Umgebung vorgezogen werden.
 
 \subsection{Vorlagen}
+\label{sec:Schreiben:Vorlagen}
 
-Dieses Dokument: IEEE Paper
-Dokumentvorlagen - SDQ Wiki (kit.edu)
+Eine große Stärke von \LaTeX ist die Trennung von Inhalt und Layout. 
+Während der Inhalt im Zentrum des wissenschaftlichen Schreibens steht, wird das Layout meist vorgegeben. 
+Dieses Dokument etwa nutzt die Vorlage von \emph{IEEE}-Papieren. Für Arbeiten am SDQ gibt es ebenfalls Vorlagen:
+
+\smallskip
+\begin{itemize}[label={\symbolInfo}]
+    \item \href{https://sdqweb.ipd.kit.edu/wiki/Dokumentvorlagen}{SDQ-Wiki --- Dokumentvorlagen}
+\end{itemize}
 
 \subsection{Hilfreiche Pakete}
+\label{sec:Schreiben:Pakete}
+
+Moderne \LaTeX-Distributionen bestehen aus mehreren Tausend Paketen, welche mittels des \emph{usepackage}-Befehls eingebunden werden können. 
+Hilfreiche Dokumentation zu diesen findet man üblicherweise auf \infoLink{https://ctan.org/}{CTAN}. 
+Um einen ersten Überblick zu bekommen, welche für eigene Dokumente hilfreich sein könnten, hier eine (unvollständige) Liste:
+
+\smallskip
+\begin{itemize}[label={\faCube}]
+    \item \package{acronym} Verwaltet Abkürzungen und stellt sicher, dass diese (nur) einmal ausgeschrieben werden
+    \item \package{amsmath} Fügt eine Vielzahl von Funktionen für mathematische Formeln hinzu
+    \item \package{csquotes} Ermöglicht verschiedenste Zitationsstile, z.B. für die Unterstützung anderer Sprachen 
+    \item \package{babel} Fügt Sprachsupport für Schlüsselwörter in 250 Sprachen hinzu
+    \item \package{booktabs} Hochwertige Tabellen die den Anforderungen moderner Dokumente genügen
+    \item \package{biblatex} Reimplementierung von \bibtex\ mit erweiterter Funktionalität, ist zusammen mit \emph{biber} zu nutzen
+    \item \package{color} Ermöglicht erweiterte Einstellungen für Farben, z.B. für farbigen Text oder farbige Referenzen
+    \item \package{enumitem} Erweitert die Konfigurierbarkeit von Listen, insbesondere die Kontrolle über Labels
+    \item \package{graphicx} Fügt mehr Optionen für das  Einbinden von Grafiken hinzu
+    \item \package{hyperref} Erleichtert (klickbare) Cross-Referenzen und Verlinkungen 
+    \item \package{listings} Automatisch formatierte Quelltext-Abschnitte, native Unterstützung von vielen Programmiersprachen
+    \item \package{soul} Erweiterte Textformatierung inkl. Durchstreichen und farbiger Hervorhebung
+    \item \package{stmaryrd} Beinhaltet viele (mathematische) Symbole und Klammern
+    \item \package{todonotes} Ermöglicht die Hervorhebung von offenen Aufgaben und Problemen im Dokument selbst
+\end{itemize}
+\smallskip
+
+\noindent
+\emph{Hinweis}: Nur verwendete Pakete sollten importiert werden. 
+Zudem können manche Pakete auch bereits von der verwendeten Vorlage importiert und konfiguriert worden sein.
 
 \subsection{Diagramme}
+\label{sec:Schreiben:Diagramme}
 
-Diagramm editoren
-Direkt in Latex
+Oft bieten sich Diagramme an, um komplexere Zusammenhänge wie Strukturen oder Abläufe zu visualisieren. Diagramme sollten dabei nie losgelöst sein, sondern im Fließtext referenziert und erklärt werden. Zur Erstellung von Diagrammen existiert eine Vielzahl von Tools, darunter:
+
+\smallskip
+\begin{itemize}[label={\symbolTool}]
+    \item \href{https://www.diagrams.net//}{diagrams.net}, auch bekannte als \emph{draw.io}, eine umfangreiche web-basierte Open-Source Software, kostenlos
+    \item \href{https://www.lucidchart.com/}{Lucidchart}, eine proprietäre Plattform für Visualisierung aller Art (für Studierende kostenlos)
+    \item \href{https://www.microsoft.com/de-de/microsoft-365/visio}{Microsoft Visio}, ein Teil von Microsoft 365 (für KIT-Studierende kostenlos)
+\end{itemize}
+\smallskip
+
+\noindent
+Alternativ können Diagramme auch direkt in \LaTeX\ mit Hilfe von \infoLink{https://sdqweb.ipd.kit.edu/wiki/TikZ}{TikZ} erstellt werden, was allerdings einen erheblichen Einarbeitungsaufwand mit sich bringt und für Anfänger gänzlich ungeeignet ist (eventuell gilt dasselbe auch für Fortgeschrittene...).
 
 \section{Präsentieren}
+\label{sec:Praesentieren}
 
-Stil, frei und flüssig
-Latex vs. PowerPoint
+Nach der Fertigstellung einer wissenschaftlichen Ausarbeitung wird diese üblicherweise präsentiert -- das gilt sowohl für Seminararbeiten als auch für große Veröffentlichungen auf internationalen Konferenzen. 
+
+\subsection{Vortragen}
+\label{sec:Praesentieren:Vortragen}
+
+Auf Vorträge treffen die gleichen Regeln und Tipps wie auch für Ausarbeitungen zu: Das \emph{Prinzip der Pyramide} beachten, an Vorgaben zu Vorlagen, Inhalt und Umfang halten, nüchtern und präzise präsentieren, Quellen sauber zitieren und kenntlich machen. 
+Darüber hinaus gelten auch die wohlbekannten Regeln eines guten Vortrags: Lesbare, nicht überladene Folien erstellen, Inhalte und insbesondere Grafiken erklären, frei und flüssig präsentieren, Backup-Folien für Rückfragen bereithalten.
+
+\subsection{\LaTeX\ vs. Microsoft PowerPoint}
+\label{sec:Praesentieren:PowerPoint}
+
+Studierenden ist es üblicherweise freigestellt, ob die Vortragsfolien mit \toolLink{https://ctan.org/pkg/beamer}{\LaTeX\ beamer} oder einem Präsentations-Tool wie PowerPoint erstellt werden. 
+Obwohl die Entscheidung für \LaTeX\ naheliegend scheint, hat diese auch Nachteile. 
+Die Erfahrung zeigt, dass mit \LaTeX\ erstellte Präsentationen von Studierenden nicht selten eine schlechtere Qualität u.a. bezüglich des Layouts aufweisen. 
+Im Gegensatz zu Dokumenten sind hier die technischen Hürden größer und gute Folien mit mehr Aufwand verbunden.
+
 
 \section{Verwalten}
+\label{sec:Verwalten}
+
+Wiss A von wenigen Monat zu vielen Jahren
 
 \subsection{Literaturverwaltung}
 
@@ -147,3 +233,5 @@ SVN, git
 
 Sprach-Tools nutzen, z.B. Linguee und DeepL
 PDF in Word öffnen um Grammatik zu prüfen
+LatexMK
+stack exchange latex

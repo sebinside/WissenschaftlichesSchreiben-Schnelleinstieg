@@ -4,10 +4,13 @@
 \RequirePackage[ngerman]{babel}
 \RequirePackage{fontawesome}
 \RequirePackage{enumitem}
+\RequirePackage{soul}
 
-% Fancy colored links
+
+% Color definitions based on latexcolor.com
 \RequirePackage{color}
-\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39} % based on latexcolor.com
+\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+\definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}
 
 \RequirePackage[final]{hyperref}
 \hypersetup{
@@ -16,8 +19,19 @@
     citecolor = {black}
 }
 
+\sethlcolor{gainsboro}
+
 % Custom link commands
 \newcommand{\symbolInfo}{\faInfoCircle}
 \newcommand{\symbolTool}{\faWrench}
 \newcommand{\infoLink}[2]{\symbolInfo\,~\href{#1}{#2}}
 \newcommand{\toolLink}[2]{\symbolTool\,~\href{#1}{#2}}
+
+% Filetype highlighting
+\newcommand{\fileType}[1]{\hl{\texttt{.#1}}}
+
+% Faking bibtex smybol
+\newcommand{\bibtex}{\textsc{Bib}\TeX}
+
+% Package template
+\newcommand{\package}[1]{\textbf{#1}:}
