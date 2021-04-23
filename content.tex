@@ -1,4 +1,4 @@
-\section{Einleitung}
+\section{Einleitung}%
 \label{sec:Einleitung}
 
 Wissenschaftliche Artikel sind die Grundlage für die Dokumentation und den Austausch von Herausforderungen, Methoden, Ansätzen und Ergebnissen unter Forschenden. 
@@ -6,7 +6,7 @@ Das präzise und nachvollziehbare Schreiben soll deshalb im Studium im Rahmen vo
 Dieses Dokument bietet einen Schnelleinstieg in die wichtigsten Grundlagen und Werkzeuge und ergänzt die ausführlichen Informationen des \infoLink{https://sdqweb.ipd.kit.edu/wiki/Wissenschaftliches_Schreiben}{SDQ-Wikis}.
 
 
-\section{Was macht Schreiben wissenschaftlich?}
+\section{Was macht Schreiben wissenschaftlich?}%
 \label{sec:WissenschaftlichesSchreiben}
 
 Wissenschaftliches Schreiben ist präzise, nüchtern, nachvollziehbar und überprüfbar. 
@@ -29,12 +29,12 @@ Hierzu:
 \end{itemize}
 
 
-\section{Recherchieren}
+\section{Recherchieren}%
 \label{sec:Recherchieren}
 
 Die Recherche, also das Suchen, Lesen und Zitieren anderer wissenschaftlicher Veröffentlichungen, gehört zu den Kernaufgaben wissenschaftlicher Arbeit.
 
-\subsection{Richtig suchen}
+\subsection{Richtig suchen}%
 \label{sec:Recherchieren:Suchen}
 
 Üblicherweise werden zu Beginn einer Seminar- oder Abschlussarbeit einige Quellen von den Betreuenden zur Verfügung gestellt. 
@@ -62,7 +62,7 @@ Diese unabhängige Begutachtung durch andere Wissenschaftler gilt als wichtige M
 Zu Quellenarten ohne Peer-Review zählen technische Berichte, Dissertationen, Abschlussarbeiten oder Papiere in e-Print-Archiven wie \href{https://arXiv.org}{arXiv.org}.  
 \href{https://www.wikipedia.org/}{Wikipedia} eignet sich nur fur einen initialen Überblick.
 
-\subsection{Richtig lesen}
+\subsection{Richtig lesen}%
 \label{sec:Recherchieren:Lesen}
 
 Papiere sollten stets mit einem Ziel oder definierten Fragen gelesen werden. 
@@ -73,7 +73,7 @@ Aus diesen Gründen sollten Papiere \emph{zielgerichtet} gelesen werden: Zunäch
 Der Inhalt anderer Papiere sollte immer kritisch hinterfragt werden: Was wurde warum und wie gemacht, wie lassen sich Vorgehen, Ergebnisse und Evaluation bewerten? 
 Erkenntnisse und eigene Kommentare können mit farblichen Markierungen festgehalten werden, etwa für Kategorien wie: \emph{Relevant}, \emph{Unklar} oder \emph{Interessante Referenz}.
 
-\subsection{Richtig zitieren}
+\subsection{Richtig zitieren}%
 \label{sec:Recherchieren:Zitieren}
 
 Alle Inhalte, die aus anderen Arbeiten stammen, müssen als Zitat gekennzeichnet werden. 
@@ -88,13 +88,13 @@ Hierzu:
 \end{itemize}
 
 
-\section{Schreiben}
+\section{Schreiben}%
 \label{sec:Schreiben}
 
 Für die Erstellung wissenschaftlicher Dokumente aller Art hat sich das Textsatzsystem \TeX\ durchgesetzt. 
 Die Erweiterung \LaTeX\ ermöglicht es Autoren, sich auf den Inhalt ihrer Dokumente zu konzentrieren und weniger Fokus auf die Formatierung dieser legen zu müssen.
 
-\subsection{Die Sprache \LaTeX}
+\subsection{Die Sprache \LaTeX}%
 \label{sec:Schreiben:Sprache}
 
 \LaTeX\ ist eine textbasierte Auszeichnungssprache (engl. \emph{Markup Language}) und folgt \emph{nicht} dem \emph{WYSIWYG}-Prinzip (\emph{\textbf{W}hat \textbf{Y}ou \textbf{S}ee \textbf{I}s \textbf{W}hat \textbf{Y}ou \textbf{G}et}) wie etwa Microsoft Word. 
@@ -107,7 +107,7 @@ Hierzu:
     \item \href{https://learnxinyminutes.com/docs/de-de/latex-de/}{Lerne X in Y Minuten: LaTeX}
 \end{itemize}
 
-\subsection{Installation}
+\subsection{Installation}%
 \label{sec:Schreiben:Installation}
 
 Um lokal \LaTeX-Dokumente erzeugen zu können, nutzt man eine Distribution wie \toolLink{http://www.tug.org/texlive/}{TeX Live}. 
@@ -117,7 +117,7 @@ Zu den wichtigsten Dateitypen zählen: \fileType{tex} (\TeX-Dokumente), \fileTyp
 Beim Generieren von PDF-Dateien fallen zudem temporäre Dateien an; diese können meistens ignoriert werden.
 Für einen besseren Überblick empfiehlt es sich, Inhalte in mehrere \fileType{tex}-Dateien aufzuteilen und diese mit Hilfe des \emph{Input}-Befehls einzubinden.
 
-\subsection{Werkzeuge}
+\subsection{Werkzeuge}%
 \label{sec:Schreiben:Werkzeuge}
 
 Um effizient \LaTeX-Dokumente schreiben zu können, wurden in den letzten Jahrzehnten eine Vielzahl von Editoren entwickelt. Viele davon sind, im Vergleich mit aktuellen IDEs, leider ziemlich in die Jahre gekommen. Daher empfehle ich:
@@ -129,7 +129,7 @@ Um effizient \LaTeX-Dokumente schreiben zu können, wurden in den letzten Jahrze
 \end{itemize}
 \smallskip
 
-\subsection{\bibtex\ vs. Bib\LaTeX}
+\subsection{\bibtex\ vs. Bib\LaTeX}%
 \label{sec:Schreiben:Bibtex}
 
 \bibtex\ übernimmt die Verwaltung und Generierung des Literaturverzeichnisses, indem Referenzen im Text (z.B. mittels des \emph{Cite}-Befehls) mit verlinkten \fileType{bib}-Dateien abgeglichen werden. 
@@ -137,7 +137,7 @@ Bib\LaTeX\ erweitert diese Funktionalität unter anderem um Unicode-Support und 
 In Distribution wie \toolLink{http://www.tug.org/texlive/}{TeX Live} sind beide enthalten. 
 Wenn möglich, sollte Bib\LaTeX\ auf Grund der moderneren Umgebung vorgezogen werden.
 
-\subsection{Vorlagen}
+\subsection{Vorlagen}%
 \label{sec:Schreiben:Vorlagen}
 
 Eine große Stärke von \LaTeX ist die Trennung von Inhalt und Layout. 
@@ -149,7 +149,7 @@ Dieses Dokument etwa nutzt die Vorlage von \emph{IEEE}-Papieren. Für Arbeiten a
     \item \href{https://sdqweb.ipd.kit.edu/wiki/Dokumentvorlagen}{SDQ-Wiki --- Dokumentvorlagen}
 \end{itemize}
 
-\subsection{Hilfreiche Pakete}
+\subsection{Hilfreiche Pakete}%
 \label{sec:Schreiben:Pakete}
 
 Moderne \LaTeX-Distributionen bestehen aus mehreren Tausend Paketen, welche mittels des \emph{usepackage}-Befehls eingebunden werden können. 
@@ -179,7 +179,7 @@ Um einen ersten Überblick zu bekommen, welche für eigene Dokumente hilfreich s
 \emph{Hinweis}: Nur verwendete Pakete sollten importiert werden. 
 Zudem können manche Pakete auch bereits von der verwendeten Vorlage importiert und konfiguriert worden sein.
 
-\subsection{Diagramme}
+\subsection{Diagramme}%
 \label{sec:Schreiben:Diagramme}
 
 Oft bieten sich Diagramme an, um komplexere Zusammenhänge wie Strukturen oder Abläufe zu visualisieren. Diagramme sollten dabei nie losgelöst sein, sondern im Fließtext referenziert und erklärt werden. Zur Erstellung von Diagrammen existiert eine Vielzahl von Tools, darunter:
@@ -195,12 +195,12 @@ Oft bieten sich Diagramme an, um komplexere Zusammenhänge wie Strukturen oder A
 \noindent
 Alternativ können Diagramme auch direkt in \LaTeX\ mit Hilfe von \infoLink{https://sdqweb.ipd.kit.edu/wiki/TikZ}{TikZ} erstellt werden, was allerdings einen erheblichen Einarbeitungsaufwand mit sich bringt und für Anfänger gänzlich ungeeignet ist (eventuell gilt dasselbe auch für Fortgeschrittene...).
 
-\section{Präsentieren}
+\section{Präsentieren}%
 \label{sec:Praesentieren}
 
 Nach der Fertigstellung einer wissenschaftlichen Ausarbeitung wird diese üblicherweise präsentiert -- das gilt sowohl für Seminararbeiten als auch für große Veröffentlichungen auf internationalen Konferenzen. 
 
-\subsection{Vortragen}
+\subsection{Vortragen}%
 \label{sec:Praesentieren:Vortragen}
 
 Auf Vorträge treffen die gleichen Regeln und Tipps wie auch für Ausarbeitungen zu: Das \emph{Prinzip der Pyramide} beachten, an Vorgaben zu Vorlagen, Inhalt und Umfang halten, nüchtern und präzise präsentieren, Quellen sauber zitieren und kenntlich machen. 
@@ -211,7 +211,7 @@ Darüber hinaus gelten auch die wohlbekannten Regeln eines guten Vortrags: Lesba
     \item \href{https://sdqweb.ipd.kit.edu/wiki/Vortragshinweise}{SDQ-Wiki --- Vortragshinweise}
 \end{itemize}
 
-\subsection{\LaTeX\ vs. Microsoft PowerPoint}
+\subsection{\LaTeX\ vs. Microsoft PowerPoint}%
 \label{sec:Praesentieren:PowerPoint}
 
 Studierenden ist es üblicherweise freigestellt, ob die Vortragsfolien mit \toolLink{https://ctan.org/pkg/beamer}{\LaTeX\ beamer} oder einem Präsentations-Tool wie PowerPoint erstellt werden. 
@@ -220,13 +220,13 @@ Die Erfahrung zeigt, dass mit \LaTeX\ erstellte Präsentationen von Studierenden
 Im Gegensatz zu Dokumenten sind hier die technischen Hürden größer und gute Folien mit mehr Aufwand verbunden, weswegen die Entscheidung gut abgewägt werden sollte.
 
 
-\section{Verwalten}
+\section{Verwalten}%
 \label{sec:Verwalten}
 
 Wissenschaftliche Ausarbeitungen können sich über einen Zeitraum von wenigen Monaten (z.B. Seminararbeiten) bis hin zu vielen Jahren (z.B. Dissertationen) erstrecken. 
 Aus diesem Grund ist die saubere Verwaltung von Dokumenten und Literatur unumgänglich.
 
-\subsection{Literaturverwaltung}
+\subsection{Literaturverwaltung}%
 \label{sec:Verwalten:Literatur}
 
 Im Rahmen wissenschaftlichen Arbeit findet und ließt man eine Vielzahl anderer Veröffentlichungen. 
@@ -242,7 +242,7 @@ Zu den hilfreichen Funktionen solcher Werkzeuge zählen:
     \item Import und Export von \bibtex-Dateien
 \end{itemize}
 
-\subsection{Versionsverwaltung}
+\subsection{Versionsverwaltung}%
 \label{sec:Verwalten:Version}
 
 Aktiv bearbeitete Dokumente wie Seminararbeiten und insbesondere Abschlussarbeiten sollten regelmäßig, im Idealfall täglich, gesichert werden. 
@@ -255,7 +255,7 @@ Da \LaTeX\- wie auch \bibtex\-Dateien textbasiert sind, lassen sich Änderungen 
 Kein Backup, kein Mitleid. 
 Erst recht als Informatiker.
 
-\section{Weitere Tipps und Werkzeuge}
+\section{Weitere Tipps und Werkzeuge}%
 \label{sec:Tipps}
 
 Um dieses Dokument kurz zu halten, konnten eine Vielzahl weiterer nützlicher Tipps und Werkzeuge nicht mit aufgenommen werden. An dieser Stelle sei erneut auf das umfangreiche \infoLink{https://sdqweb.ipd.kit.edu/wiki/Wissenschaftliches_Schreiben}{SDQ-Wiki} verwiesen. Ebenfalls hilfreich:
