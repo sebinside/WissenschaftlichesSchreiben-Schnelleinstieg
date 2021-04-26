@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "00:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "Dependency"
+      include: "scope"
