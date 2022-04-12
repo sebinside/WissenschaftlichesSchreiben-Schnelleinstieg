@@ -15,7 +15,7 @@ jobs:
         run: mkdir publish && cp main.pdf publish/Schnelleinstieg.pdf
       
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: pdf
           path: publish
